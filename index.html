@@ -285,66 +285,61 @@
     .selected-access { color: #94a3b8; font-size: 8.5px; }
     .selected-price { color: #34d399; font-size: 15px; font-weight: 900; white-space: nowrap; }
 
-    /* Payment Tabs */
+    /* Payment Tabs (Grid-2 for bKash & Nagad) */
     .payment-tabs-label { display: block; margin-bottom: 8px; color: #f8fafc; font-size: 11px; font-weight: 800; }
-    .payment-methods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
-    .method-tab {
+    .payment-methods-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+    .method-tab-2 {
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 4px; padding: 10px 4px; border: 2px solid #334155;
+      gap: 4px; padding: 12px 8px; border: 2px solid #334155;
       border-radius: 12px; background: #10172a; color: #94a3b8;
-      font-size: 12px; font-weight: 900; cursor: pointer;
+      font-size: 13px; font-weight: 900; cursor: pointer;
       transition: all 0.2s ease; user-select: none;
     }
-    .method-tab:hover { border-color: #6366f1; background: #18223d; }
-    .method-tab.active.bkash-tab {
+    .method-tab-2:hover { border-color: #6366f1; background: #18223d; }
+    .method-tab-2.active.bkash-tab {
       border-color: #e2136e !important;
       background: linear-gradient(135deg, rgba(226, 19, 110, 0.22), rgba(226, 19, 110, 0.08)) !important;
       color: #ff60a4 !important; box-shadow: 0 0 20px rgba(226, 19, 110, 0.35); transform: translateY(-1px);
     }
-    .method-tab.active.nagad-tab {
+    .method-tab-2.active.nagad-tab {
       border-color: #f7941d !important;
       background: linear-gradient(135deg, rgba(247, 148, 29, 0.22), rgba(247, 148, 29, 0.08)) !important;
       color: #ffb453 !important; box-shadow: 0 0 20px rgba(247, 148, 29, 0.35); transform: translateY(-1px);
     }
-    .method-tab.active.rocket-tab {
-      border-color: #a855f7 !important;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.22), rgba(168, 85, 247, 0.08)) !important;
-      color: #d99ce0 !important; box-shadow: 0 0 20px rgba(168, 85, 247, 0.35); transform: translateY(-1px);
-    }
-    .tab-badge { font-size: 8px; padding: 2px 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); font-weight: 800; }
+    .tab-sub-tag { font-size: 8.5px; padding: 2px 7px; border-radius: 999px; background: rgba(255, 255, 255, 0.1); font-weight: 800; }
 
     /* Payment Details Box */
-    .payment-box {
+    .payment-box-highlight {
       padding: 16px 14px; margin-bottom: 16px;
       border: 1.5px solid rgba(99, 102, 241, 0.4);
       border-radius: 14px; background: #070d1e;
       box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
     }
-    .payment-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 10px; }
-    .payment-title { font-size: 12px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 6px; }
-    .payment-amount {
+    .payment-heading-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 10px; }
+    .payment-title-badge { font-size: 12px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 6px; }
+    .payment-amount-alert {
       padding: 10px 12px; margin-bottom: 12px;
       border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px;
       background: rgba(16, 185, 129, 0.1); color: #e2e8f0; font-size: 10.5px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .payment-amount strong { color: #34d399; font-size: 15px; font-weight: 900; }
-    .payment-number-box {
+    .payment-amount-alert strong { color: #34d399; font-size: 15px; font-weight: 900; }
+    .payment-number-plate {
       display: flex; align-items: center; justify-content: space-between;
       gap: 8px; padding: 12px 14px; margin-bottom: 12px;
       border: 1.5px solid #4f46e5; border-radius: 12px; background: #0f172a;
       box-shadow: 0 4px 16px rgba(79, 70, 229, 0.25);
     }
-    .number-label { color: #cbd5e1; font-size: 9px; font-weight: 800; text-transform: uppercase; margin-bottom: 2px; }
-    .number-value { color: #ffffff; font-family: monospace; font-size: 17px; font-weight: 900; letter-spacing: 0.8px; }
-    .copy-btn { 
+    .number-plate-label { color: #cbd5e1; font-size: 9px; font-weight: 800; text-transform: uppercase; margin-bottom: 2px; }
+    .number-plate-digits { color: #ffffff; font-family: monospace; font-size: 17px; font-weight: 900; letter-spacing: 0.8px; }
+    .copy-btn-large { 
       padding: 8px 14px; border-radius: 8px; background: #4f46e5; color: #fff;
       font-size: 10.5px; font-weight: 900; transition: all 0.15s ease; white-space: nowrap;
     }
-    .copy-btn:hover { background: #6366f1; transform: scale(1.03); }
-    .copy-btn.copied { background: #059669 !important; }
-    .payment-steps { padding-left: 16px; color: #cbd5e1; font-size: 10px; line-height: 1.65; }
-    .payment-steps li { margin-bottom: 4px; }
+    .copy-btn-large:hover { background: #6366f1; transform: scale(1.03); }
+    .copy-btn-large.copied { background: #059669 !important; }
+    .payment-instruction-list { padding-left: 16px; color: #cbd5e1; font-size: 10px; line-height: 1.65; }
+    .payment-instruction-list li { margin-bottom: 4px; }
 
     /* Form */
     .form-group { margin-bottom: 14px; }
@@ -677,51 +672,49 @@
             <div id="displayProdPrice" class="selected-price">১৯৯৳</div>
           </div>
 
-          <!-- PAYMENT METHOD TABS -->
+          <!-- PAYMENT METHOD TABS (bKash & Nagad Only) -->
           <span class="payment-tabs-label">১. যে মাধ্যমে টাকা পাঠাবেন সিলেক্ট করুন:</span>
-          <div class="payment-methods-grid">
-            <div class="method-tab bkash-tab active" onclick="setPaymentMethod('bKash')">
-              <span>বিকাশ</span>
-              <span class="tab-badge">Send Money</span>
+          <div class="payment-methods-grid-2">
+            <div class="method-tab-2 bkash-tab active" onclick="setPaymentMethod('bKash')">
+              <span>বিকাশ (bKash)</span>
+              <span class="tab-sub-tag">Send Money</span>
             </div>
-            <div class="method-tab nagad-tab" onclick="setPaymentMethod('Nagad')">
-              <span>নগদ</span>
-              <span class="tab-badge">Send Money</span>
-            </div>
-            <div class="method-tab rocket-tab" onclick="setPaymentMethod('Rocket')">
-              <span>রকেট</span>
-              <span class="tab-badge">Send Money</span>
+            <div class="method-tab-2 nagad-tab" onclick="setPaymentMethod('Nagad')">
+              <span>নগদ (Nagad)</span>
+              <span class="tab-sub-tag">Send Money</span>
             </div>
           </div>
 
           <!-- Payment Details Box -->
-          <div class="payment-box">
-            <div class="payment-heading">
-              <div class="payment-title" id="paymentBoxHeading">📲 <span id="selectedMethodTitle">বিকাশ</span> Send Money নম্বর:</div>
+          <div class="payment-box-highlight">
+            <div class="payment-heading-row">
+              <div class="payment-title-badge" id="paymentBoxHeading">
+                <span>📲</span> <span id="selectedMethodTitle">বিকাশ (bKash)</span> Send Money নম্বর:
+              </div>
             </div>
 
-            <div class="payment-amount">
+            <div class="payment-amount-alert">
               <span>এই অর্ডারের জন্য পাঠাতে হবে:</span>
               <strong id="paymentAmountDisplay">১৯৯৳</strong>
             </div>
 
-            <div class="payment-number-box">
+            <div class="payment-number-plate">
               <div>
-                <div class="number-label" id="currentNumberType">পার্সোনাল নম্বর</div>
-                <div id="paymentNumber" class="number-value">01922552889</div>
+                <div class="number-plate-label" id="currentNumberType">বিকাশ পার্সোনাল নম্বর</div>
+                <div id="paymentNumber" class="number-plate-digits">01922552889</div>
               </div>
 
               <button
                 type="button"
                 id="copyBtn"
-                class="copy-btn"
+                class="copy-btn-large"
                 onclick="copyNumber(this)"
               >
                 কপি করুন 📋
               </button>
             </div>
 
-            <ol class="payment-steps">
+            <ol class="payment-instruction-list">
               <li>উপরের নম্বরে নির্ধারিত মূল্য <strong>Send Money</strong> করুন।</li>
               <li>টাকা পাঠানোর পর যে নম্বর থেকে পাঠিয়েছেন তা নিচের বক্সে লিখুন।</li>
               <li>ভেরিফাই বাটনে ক্লিক করে WhatsApp-এ আপনার গুগল ড্রাইভ লিংক ও CapCut Pro সংগ্রহ করুন।</li>
@@ -743,7 +736,7 @@
                 class="form-control"
                 inputmode="numeric"
                 autocomplete="tel"
-                maxlength="12"
+                maxlength="11"
                 placeholder="01XXXXXXXXX"
                 required
               >
@@ -1119,8 +1112,8 @@
       "https://script.google.com/macros/s/AKfycbxSXK-2BhPXikrGkVJJ-TEUIxBN1awJtVywG2gV7zlZah5ews3L73Ea5tZkjLb2qfTL/exec";
 
     const SUPPORT_WHATSAPP = "8801962695637";
-    const DEFAULT_PAYMENT_NUMBER = "01922552889";
-    const ROCKET_PAYMENT_NUMBER = "019225528899";
+    const BKASH_NUMBER = "01922552889";
+    const NAGAD_NUMBER = "01340251818";
 
     /* STATE */
     let activeProductId = "VEB-002";
@@ -1191,31 +1184,26 @@
       }
     }
 
-    /* PAYMENT METHOD TABS */
+    /* PAYMENT METHOD TABS (bKash & Nagad) */
     function setPaymentMethod(method) {
       document.getElementById("paymentMethod").value = method;
       const paymentNumberEl = document.getElementById("paymentNumber");
       const headingEl = document.getElementById("selectedMethodTitle");
       const labelEl = document.getElementById("currentNumberType");
       
-      const tabs = document.querySelectorAll(".method-tab");
+      const tabs = document.querySelectorAll(".method-tab-2");
       tabs.forEach(tab => tab.classList.remove("active"));
       
       if (method === "bKash") {
         document.querySelector(".bkash-tab").classList.add("active");
-        paymentNumberEl.textContent = DEFAULT_PAYMENT_NUMBER;
-        headingEl.textContent = "বিকাশ";
-        labelEl.textContent = "পার্সোনাল নম্বর";
+        paymentNumberEl.textContent = BKASH_NUMBER;
+        headingEl.textContent = "বিকাশ (bKash)";
+        labelEl.textContent = "বিকাশ পার্সোনাল নম্বর";
       } else if (method === "Nagad") {
         document.querySelector(".nagad-tab").classList.add("active");
-        paymentNumberEl.textContent = DEFAULT_PAYMENT_NUMBER;
-        headingEl.textContent = "নগদ";
-        labelEl.textContent = "পার্সোনাল নম্বর";
-      } else if (method === "Rocket") {
-        document.querySelector(".rocket-tab").classList.add("active");
-        paymentNumberEl.textContent = ROCKET_PAYMENT_NUMBER;
-        headingEl.textContent = "রকেট";
-        labelEl.textContent = "পার্সোনাল নম্বর (১২ ডিজিট)";
+        paymentNumberEl.textContent = NAGAD_NUMBER;
+        headingEl.textContent = "নগদ (Nagad)";
+        labelEl.textContent = "নগদ পার্সোনাল নম্বর";
       }
     }
 
@@ -1334,9 +1322,9 @@
       const paymentMethod = document.getElementById("paymentMethod").value;
       const senderNumber = normalizePhone(document.getElementById("senderNumber").value);
 
-      const senderPhoneRegex = /^01[3-9]\d{8,9}$/;
+      const senderPhoneRegex = /^01[3-9]\d{8}$/;
       if (!senderPhoneRegex.test(senderNumber)) {
-        showFormError("দয়া করে সঠিক Sender Number দিন (বিকাশ/নগদে ১১ ডিজিট, রকেটে ১২ ডিজিট হতে পারে)।");
+        showFormError("দয়া করে সঠিক ১১ ডিজিটের Sender Number দিন (যেমন: 01922552889)।");
         return;
       }
 
@@ -1413,7 +1401,7 @@
 
     /* INPUT MASKS */
     document.getElementById("senderNumber").addEventListener("input", function () {
-      this.value = this.value.replace(/\D/g, "").slice(0, 12);
+      this.value = this.value.replace(/\D/g, "").slice(0, 11);
     });
 
     /* INITIAL PRODUCT SETUP */
